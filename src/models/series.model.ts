@@ -5,10 +5,10 @@ export interface SeriesModel {
    msg: string;
    name: string;
    email: string;
-   urls: Array<urls>
+   urls: Array<Urls>
 }
 
-export interface urls {
+export interface Urls {
    type: string
    urlink: string
 }

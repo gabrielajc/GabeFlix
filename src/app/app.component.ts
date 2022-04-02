@@ -1,4 +1,4 @@
-import { urls, SeriesModel } from './../models/series.model';
+import { SeriesModel, Urls } from './../models/series.model';
 import { SeriesService } from './../services/series.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,12 +12,18 @@ export class AppComponent implements OnInit {
  public series: SeriesModel;
  public erro: any;
 
+
   constructor(private seriesService: SeriesService) {
     this.getAll
   }
 
   ngOnInit() {
 
+  }
+
+  getAbout() {
+    this.seriesService.getAbout()
+    .then(about => console.log(about))
   }
 
   getAll(): void {
