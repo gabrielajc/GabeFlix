@@ -15,8 +15,12 @@ public getInfo(): Observable<SeriesModel> {
 return this.http.get<SeriesModel>(`${API_PATH}`)
 }
 
-
 public getAbout() {
   return this.http.get<SeriesModel>(`${API_PATH}about`).toPromise();
 }
+
+public getPhotos() {
+  return this.http.get<SeriesModel>(`${API_PATH}uploads`)
+}
+
 }
