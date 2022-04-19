@@ -23,4 +23,8 @@ public getPhotos() {
   return this.http.get<SeriesModel>(`${API_PATH}uploads`)
 }
 
+public getTitles() {
+  return this.http.get<SeriesModel>(`${API_PATH}titulos`)
+}
+
 }

@@ -1,4 +1,4 @@
-import { SeriesModel, Urls } from './../models/series.model';
+import { SeriesModel, Urls, Titulos } from './../models/series.model';
 import { SeriesService } from './../services/series.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -39,4 +39,17 @@ export class AppComponent implements OnInit {
     })
 
 }
+
+  getTitles(): void {
+    this.seriesService.getTitles()
+    .subscribe((data: SeriesModel) => {
+      this.series = data;
+      console.log(data)
+    },
+
+    error => {
+      this.erro = error
+     console.log(error)
+    })
+  }
 }
